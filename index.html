@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="gridy.css" />
+    <!--<script src="gridy.js"></script>-->
+    <script src='gridy.js'></script>
+    <script src='_data.json' type='text/javascript'></script>
+
+    <style>
+        #grid{
+            overflow-x: scroll;
+        }
+
+        #grid::-webkit-scrollbar{
+            width: 1em;
+         
+        }
+    #grid::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+    }
+
+    #grid::-webkit-scrollbar-thumb {
+  background-color: rgb(19, 114, 114);
+  outline: 1px solid slategrey;
+  border-radius: 10px;
+  
+}
+
+#grid::-webkit-scrollbar-button{
+    background:white;
+}
+#grid::-webkit-scrollbar-corner{
+    border-radius: 0.5em;
+}
+
+#grid::-webkit-scrollbar-track-piece{
+    border-radius: 1em;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div id='grid'></div>
+
+
+</body>
+<script type='text/javascript'>
+    //gridy.setGrid('gridy').loadData(data, ["item", "name"]).pagenation(2);
+    var data = [{
+        "ID": 1,
+        "Name": "element1",
+        "Date": "12-06-1993",
+        "isView": false,
+        "user": "USER1 ",
+        "Action": "TEST ACTION NO METHOD ",
+        "count": 1,
+        "send": false,
+        "Index": 1,
+        "data": "data test 121 - sio-siji-itp-daya - welxoe",
+        "SAction": "sdin",
+        "Scount": 6,
+        "Ssend": false,
+        "SIndex": 1,
+        "Sdata": "sd",
+        "SID": 1,
+        "SName": "el1",
+        "SDate": "12-06-2012",
+        "SisView": true,
+        "Suser": "as"
+    }, {
+        "ID": 2,
+        "Name": "element1",
+        "Date": "12-06-2012",
+        "isView": true,
+        "user": "USER1 ",
+        "Action": "TEST ACTION NO METHOD ",
+        "count": 2,
+        "send": true,
+        "Index": 1,
+        "data": "data test 121 - sio-siji-itp-daya - welxoe",
+        "SAction": "sdin",
+        "Scount": 6,
+        "Ssend": true,
+        "SIndex": 1,
+        "Sdata": "sd",
+        "SID": 1,
+        "SName": "el1",
+        "SDate": "12-06-2012",
+        "SisView": true,
+        "Suser": "as"
+    }, {
+        "ID": 3,
+        "Name": "element1",
+        "Date": "12-06-2012",
+        "isView": true,
+        "user": "USER1 ",
+        "Action": "TEST ACTION NO METHOD ",
+        "count": 3,
+        "send": true,
+        "Index": 1,
+        "data": "data test 121 - sio-siji-itp-daya - welxoe",
+        "SAction": "sdin",
+        "Scount": 6,
+        "Ssend": true,
+        "SIndex": 1,
+        "Sdata": "sd",
+        "SID": 1,
+        "SName": "el1",
+        "SDate": "12-06-2012",
+        "SisView": true,
+        "Suser": "as"
+    }, {
+        "ID": 4,
+        "Name": "element1",
+        "Date": "12-06-2012",
+        "isView": true,
+        "user": "USER1 ",
+        "Action": "TEST ACTION NO METHOD ",
+        "count": 4,
+        "send": true,
+        "Index": 1,
+        "data": "data test 121 - sio-siji-itp-daya - welxoe",
+        "SAction": "sdin",
+        "Scount": 6,
+        "Ssend": true,
+        "SIndex": 1,
+        "Sdata": "sd",
+        "SID": 1,
+        "SName": "el1",
+        "SDate": "12-06-2012",
+        "SisView": true,
+        "Suser": "as"
+    }, {
+        "ID": 5,
+        "Name": "element1",
+        "Date": "12-06-2012",
+        "isView": true,
+        "user": "USER1 ",
+        "Action": "TEST ACTION NO METHOD ",
+        "count": 5,
+        "send": true,
+        "Index": 1,
+        "data": "data test 121 - sio-siji-itp-daya - welxoe",
+        "SAction": "sdin",
+        "Scount": 6,
+        "Ssend": true,
+        "SIndex": 1,
+        "Sdata": "sd",
+        "SID": 1,
+        "SName": "el1",
+        "SDate": "12-06-2012",
+        "SisView": true,
+        "Suser": "as"
+    }, {
+        "ID": 6,
+        "Name": "element1",
+        "Date": "12-06-2012",
+        "isView": true,
+        "user": "USER1 ",
+        "Action": "TEST ACTION NO METHOD ",
+        "count": 6,
+        "send": true,
+        "Index": 1,
+        "data": "data test 121 - sio-siji-itp-daya - welxoe",
+        "SAction": "sdin",
+        "Scount": 6,
+        "Ssend": true,
+        "SIndex": 1,
+        "Sdata": "sd",
+        "SID": 1,
+        "SName": "el1",
+        "SDate": "12-06-2012",
+        "SisView": true,
+        "Suser": "as"
+    }, {
+        "ID": 1,
+        "Name": "element1",
+        "Date": "12-06-2012",
+        "isView": true,
+        "user": "USER1 ",
+        "Action": "TEST ACTION NO METHOD ",
+        "count": 6,
+        "send": true,
+        "Index": 1,
+        "data": "data test 121 - sio-siji-itp-daya - welxoe",
+        "SAction": "sdin",
+        "Scount": 6,
+        "Ssend": true,
+        "SIndex": 1,
+        "Sdata": "sd",
+        "SID": 1,
+        "SName": "el1",
+        "SDate": "12-06-2012",
+        "SisView": true,
+        "Suser": "as"
+    }];
+    //console.log(gridy.__proto__);
+
+
+    gridy('grid', {
+        columns: [{
+                datatype: 'Number',
+                columnName: 'ID'
+            }, {
+                datatype: 'string',
+                columnName: 'Name'
+            },
+            {
+                dataType: 'date',
+                columnName: 'Date'
+            },
+            {
+                dataType: 'boolean',
+                columnName: 'isView'
+            },
+            {
+                dataType: 'boolean',
+                columnName: 'user'
+            },
+            {
+                dataType: 'boolean',
+                columnName: 'Action'
+            },
+            {
+                dataType: 'boolean',
+                columnName: 'count'
+            },
+            {
+                dataType: 'boolean',
+                columnName: 'send'
+            },
+            {
+                dataType: 'Number',
+                columnName: 'Index'
+            }, {
+                datatype: 'string',
+                columnName: 'data'
+            }, {
+                dataType: 'boolean',
+                columnName: 'SAction'
+            },
+            {
+                dataType: 'boolean',
+                columnName: 'Scount'
+            },
+            {
+                dataType: 'boolean',
+                columnName: 'Ssend'
+            },
+            {
+                dataType: 'Number',
+                columnName: 'SIndex'
+            }, {
+                datatype: 'string',
+                columnName: 'Sdata'
+            }, {
+                datatype: 'Number',
+                columnName: 'SID'
+            }, {
+                datatype: 'string',
+                columnName: 'SName'
+            },
+            {
+                dataType: 'date',
+                columnName: 'SDate'
+            },
+            {
+                dataType: 'boolean',
+                columnName: 'SisView'
+            },
+            {
+                dataType: 'boolean',
+                columnName: 'Suser'
+            }
+        ],
+        dataSource: data,
+        isSort: false,
+        viewCount: 20,
+        dataType: 'XML',
+
+    });
+
+
+    function loadJSON(callback) {
+
+        var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', 'https://www.dropbox.com/s/cz3gbugem195x47/_data.json', true); // Replace 'my_data' with the path to your file
+        xobj.onreadystatechange = function () {
+            if (xobj.readyState == 4 && xobj.status == "200") {
+                // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                callback(xobj.responseText);
+            }
+        };
+        xobj.send(null);
+    }
+
+    function init() {
+
+        loadJSON(function (resp) {
+            var act = JSON.parse(resp);
+            console.log(act);
+        });
+    }
+
+    //init();
+    // function loadJson(filepath, success, error) {
+    //     var xhr = new XMLHttpRequest();
+    //     if (xhr.readyState === XMLHttpRequest.DONE) {
+    //         if (xhr.status === 200) {
+    //             if (success) {
+    //                 success(JSON.parse(xhr.response));
+    //             } else {
+    //                 if (error)
+    //                     error(xhr);
+    //             }
+    //         }
+    //     };
+
+    //     xhr.open('GET', filepath, true);
+    //     xhr.send();
+
+    // }
+
+    // loadJson('data.json', function(){
+    //     console.log(response);
+    // });
+
+    
+    
+</script>
+
+</html>

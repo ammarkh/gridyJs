@@ -1,0 +1,57 @@
+/* this version 1.0.0 from css for gridy table data project this version 
+    contains 1 style with darkgreen for gridy 
+    we will add new style later 
+    GRIDY DEVELOPEMENT TEAM.
+*/
+
+#grid {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 8px rgba(112, 112, 112, 0.9);
+}
+
+.gridyCss {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.gridyCss thead tr th {
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(21, 79, 85);
+    /*border: 1px solid gray;*/
+    /*padding: 8px 3px;**/
+    box-shadow: 0px 0px 2px 0px rgb(112, 112, 112);
+    color: white;
+    backdrop-filter: unset;
+}
+
+.gridyCss tr th {
+    padding: 10px;
+}
+
+
+
+.filterCtrl {
+    width: 100%;
+    height: 140%;
+    outline: none;
+    padding: 6px 0px;
+    font-size: 14px;
+    border-collapse: separate;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px gray solid;
+
+    /* border:none;*/
+}
+
+
+.gridyCss tr td {
+    padding: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    border: 2px rgba(230, 230, 230, 0.6) solid;
+    min-width: 120px;
+}

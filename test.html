@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src='gridTest.js'></script>
+    <link rel='stylesheet' href="gridy.css" />
+    <style type='text/css'>
+        #content {
+            width: 80%;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            left: 0;
+            border: 1px solid gray;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='content'>
+        <div id='grid'>
+
+        </div>
+
+    </div>
+    <script type='text/javascript'>
+        gridy('grid', {
+            columns: [{
+                    datatype: 'number',
+                    columnName: 'ID'
+                },
+                {
+                    datatype: 'Name',
+                    columnName: 'string'
+                }
+            ],
+            dataSource: [{
+                    'ID': 1,
+                    'Name': 'Ahmad'
+                },
+                {
+                    'ID': 2,
+                    'Name': 'samer'
+                }
+            ]
+        });
+    </script>
+</body>
+
+</html>

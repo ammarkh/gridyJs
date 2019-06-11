@@ -11,6 +11,8 @@ this library designing for help user to view data with besic way and frindly
 in this version gridy support minmum features view data , pagination , filter
 new features is coming soon .
 
+![gridy logo](https://github.com/ammarkh/gridyJs/blob/master/gridyjs.jpg)
+
 gridy 
 ----------
 best regards 

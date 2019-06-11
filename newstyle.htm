@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <script src='gridTest.js'></script>
+    <link rel='stylesheet' href="gridy.css" />
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>DEPARTEMENT ID</th>
+                <th>DEPARTEMENT NAME </th>
+                <th>title</th>
+                <th>section_id</th>
+                <th>creation_date</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+            <tr>
+                <td><input type="number" id="dep_id"></td>
+                <td><input type="text" id="dep_name"></td>
+                <td><input type="text" id="title"></td>
+                <td><input type="number" id="section_type"></td>
+                <td><input type="datetime" id="creation_date"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td> <input type="button" onclick="applyFilter()" value="search" /></td>
+
+        </tfoot>
+    </table>
+
+    <div id="grid"></div>
+
+    <script type="text/javascript">
+
+        var baseurl = "http://localhost:3211/dep";
+        function applyFilter() {
+            baseurl = 'http://localhost:3211/dep';
+            var id = document.getElementById('dep_id');
+            var name = document.getElementById('dep_name');
+            var title = document.getElementById('title');
+            var section = document.getElementById('section_type');
+            var creationdate = document.getElementById('creation_date');
+
+            var is_id = false;
+            var is_name = false;
+            var is_title = false;
+
+            if (id.value != null && id.value != "" && !is_id) {
+                baseurl += "/id/" + id.value;
+                is_id = true;
+            }
+
+            if (name.value != null && name.value != '' && !is_name) {
+                baseurl += "/name/" + name.value;
+                is_name = true;
+            }
+
+            if (title.value != null && title.value != '' && !is_title) {
+                baseurl += "/title/" + title.value;
+                is_title = true;
+            }
+
+            if (section.value != null && section.value != '') {
+                baseurl += "/section/" + section.value;
+
+            }
+
+            if (creationdate.value != null && creationdate.value != '') {
+                baseurl += "/creationdate/" + creationdate.value;
+                console.log(baseurl);
+            }
+            /*  $(document).ready(function () {
+                  jQuery.ajax({
+                      url: baseurl,
+                      type: 'GET',
+                      dataType: 'json',
+  
+                      success: function (res) {
+                          gridy('grid', {
+                              datasourc: res
+                          });
+                      }
+  
+                  });
+              });*/
+
+            readData(baseurl)
+
+            function readData(url, callback) {
+                var grid = document.getElementById('grid');
+                // console.log(grid);
+                if (grid.lastChild != null) {
+                    grid.removeChild(grid.lastChild);
+                }
+
+                var req = new XMLHttpRequest();
+
+                req.overrideMimeType("application/json");
+                req.open('GET', url, true);
+                req.onload = function () {
+                    var jsonResponse = JSON.parse(req.responseText);
+                    //callback(jsonResponse);
+                    //console.log(jsonResponse);
+                    gridy('grid', {
+                        dataSource: jsonResponse,
+                        caption: 'my System',
+                        theme:'RED',
+                        filtering:true,
+                        viewCount: 10,
+                        columns: [{
+
+                            datatype: 'number',
+                            columnName: 'Dep_Id'
+                        },
+                        {
+                            datatype: 'string',
+                            columnName: 'Dep_Name'
+                        },
+                        {
+                            datatype: 'string',
+                            columnName: 'Title'
+                        }]
+                    });
+                }
+
+                req.send(null);
+            }
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

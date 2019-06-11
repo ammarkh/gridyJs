@@ -1,6 +1,6 @@
 # gridyJs
 
-<h2>a beautiful grid for user </h2>
+<h2>gridy is customize grid for user </h2>
 
 this is a open source data  grid for user
 

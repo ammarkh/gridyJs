@@ -1,8 +1,8 @@
 /**
  * this module represent familiar grid for use we name it [gridy]
- * in this version 1.0. gridy will contains data with minmum operation
+ * in this version 2.0. gridy will contains data with minmum operation
  * we will work to make gridy have a new  features step by step .
- * GRIDY DEVELOPEMENT TEAM .
+ * GRIDY DEVELOPEMENT TEAM 2019.
  * for any question please contact us on a.m.k-it@hotmail.com
  */
 
